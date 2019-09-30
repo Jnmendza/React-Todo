@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+// import ReactDom from 'react-dom';
 
 import TodoForm from './components/TodoComponents/TodoForm';
 import TodoList from './components/TodoComponents/TodoList';
@@ -70,16 +70,15 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <h1>Todo List</h1>
+        <TodoForm
+          addTodo = {this.addTodo}
+        />
         <TodoList 
           todos={this.state.todos}
-          handleEventFinish = {this.handleEventFinish}
+          toggleTodo = {this.toggleTodo}
         />
 
-        <TodoForm
-          handleEventChange = {this.handleEventChange}
-          handleSumbit = {this.handleSumbit}
-          handleClear = {this.handleClearCompleted}
-        />
       </div>
     );
   }

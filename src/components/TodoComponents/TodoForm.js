@@ -4,7 +4,7 @@ class TodoForm extends React.Component {
     constructor() {
       super();
       this.state = {
-        item: ''
+        todo: ''
       };
     }
 
@@ -16,7 +16,7 @@ class TodoForm extends React.Component {
 
     submitTodo = event => {
         event.preventDefault();
-        this.props.addTodo(this.state.todos)
+        this.props.addTodo(this.state.todo)
     };
 
     render() {
